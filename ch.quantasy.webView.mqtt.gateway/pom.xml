@@ -10,4 +10,53 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    <repositories>
+        <repository>
+            <id>Eclipse Paho Repo</id>
+            <url>https://repo.eclipse.org/content/repositories/paho-releases/</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.paho</groupId>
+            <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+    </dependencies>
+    <build>
+	<plugins>
+	    <plugin>
+		<artifactId>maven-assembly-plugin</artifactId>
+		<configuration>
+		    <descriptorRefs>
+			<descriptorRef>jar-with-dependencies</descriptorRef>
+		    </descriptorRefs>
+		    <archive>
+			<manifest>
+			    <mainClass>ch.quantasy.gateway.WeMqWay</mainClass>
+			</manifest>
+		    </archive>
+		</configuration>
+		<executions>
+		    <execution>
+			<id>make-assembly</id>
+			<phase>package</phase>
+			<goals>
+			    <goal>single</goal>
+			</goals>
+		    </execution>
+		</executions>
+	    </plugin>
+	</plugins>
+    </build>
 </project>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SmartHome</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../js/libs/jquery/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="../js/libs/json2yaml/json2yaml.js"></script>
+        <script type="text/javascript" src="../js/libs/mqtt/mqttws31.js"></script>
+        <script type="text/javascript" src="./js/config.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="output"></div>
+        <div>Subscribed to <input type='text' id='topic' disabled />
+            Status: <input type='text' id='status' size="80" disabled /></div>
+        <object id="remoteSwitch" type="image/svg+xml" data="RemoteSwitch.svg"></object>
+        <script type="text/javascript" src="./js/mqttRemoteSwitch.js"></script>
+        <script type="text/javascript" src="./js/RemoteSwitch.js"></script>
+    </body>
+</html>
+</body>
+</html>
