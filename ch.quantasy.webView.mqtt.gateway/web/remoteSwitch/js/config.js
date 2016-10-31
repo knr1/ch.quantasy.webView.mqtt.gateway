@@ -1,5 +1,6 @@
 
 host = 'smarthome01';	// hostname or IP address
+//host='localhost';
 port = 8080;
 baseTopic = 'WebView/RemoteSwitch';		// base topic to subscribe to
 useTLS = false;
