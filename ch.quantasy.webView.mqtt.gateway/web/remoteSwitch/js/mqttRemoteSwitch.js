@@ -61,7 +61,7 @@ function onMessageArrived(message) {
 function sendText(topic,yaml) {
     console.log("to topic: " + baseTopic + " sending text: " + yaml);
     message = new Paho.MQTT.Message(yaml);
-    message.destinationName = baseTopic + "/event/touched/"+topic+"/" + clientName;
+    message.destinationName = baseTopic + "/E/touched/"+topic+"/" + clientName;
     mqtt.send(message);
 }
 
