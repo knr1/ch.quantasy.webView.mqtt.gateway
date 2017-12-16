@@ -21,7 +21,7 @@ for (var i = 0; i < blinds.length; i++) {
             var svgElement = event.target;
             var blindsParameter = {
                 "timestamp": Math.floor((new Date).getTime() / 1000),
-                "blindsId": svgElement.getAttribute("blindsId"),
+                "id": svgElement.getAttribute("blindsId"),
                 "direction": svgElement.getAttribute("direction")
             };
             var yaml = json2yaml([blindsParameter]);
